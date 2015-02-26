@@ -1,0 +1,117 @@
+#
+# system.prop for e610
+#
+# View configuration for QVGA
+view.fading_edge_length = 8
+view.touch_slop = 15
+view.minimum_fling_velocity = 25
+view.scroll_friction = 0.008
+ro.use_data_netmgrd=true
+
+# Display
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=gpu
+persist.hwc.mdpcomp.enable=false
+debug.mdpcomp.maxlayer=3
+debug.mdpcomp.logs=0
+debug.gralloc.map_fb_memory=1
+debug.hwc.fakevsync=1
+com.qc.hdmi_out=false
+
+# Video Acceleration
+video.accelerate.hw=1
+debug.performance.tuning=1
+
+# Media
+ro.media.enc.jpeg.quality=100
+media.stagefright.enable-player=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-meta=false
+media.stagefright.use-awesome=true
+persist.sys.media.use-awesome=true
+
+# Memory
+ro.ksm.default=1
+ro.zram.default=0
+ro.sys.fw.bg_apps_limit=7
+sys.mem.max_hidden_apps=7
+ro.config.max_starting_bg=4
+
+# Misc
+ro.use_data_netmgrd=true
+persist.data.ds_fmc_app.mode=0
+httplive.enable.discontinuity=true
+ro.config.sync=yes
+ro.phone_storage=0
+ro.kernel.android.checkjni=0
+ro.android.secure=0
+ro.fuse_sdcard=true
+persist.sys.strictmode.visual=0
+persist.sys.strictmode.disable=1
+persist.sys.scrollingcache=4
+power.saving.mode=1
+persist.sys.force_highendgfx=true
+
+# Enable smooth streaming
+mm.enable.smoothstreaming=true
+
+# OMX - Media
+#37491 is decimal sum of supported codecs in AAL
+#codecs: AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
+ mm.enable.qcom_parser=37491 
+ mmp.enable.3g2=true 
+ mm.enable.smoothstreaming=true 
+ mm.disable.sec_smoothstreaming=true 
+ media.aac_51_output_enabled=true
+
+# VIDC: debug_levels
+# 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
+vidc.debug.level=1
+
+rild.libpath=/vendor/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+keyguard.no_require_sim=1
+debug.sf.hw=1
+
+# system prop for audio post processing
+#
+audio.legacy.postproc=true
+#
+#snapdragon value add features
+#
+ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.gestures.camera=false
+#
+# system property to enforce Phone Mode view
+#
+ro.screen.layout=normal
+#
+#System prop for setting the pixel format
+#
+ro.staticwallpaper.pixelformat=RGB_565
+#
+#System prop for disabling the meta data mode for encoder
+#
+debug.camcorder.disablemeta=0
+#
+
+#System prop to enable ehrpd capability
+ro.config.ehrpd=true
+# System property for cabl
+ro.qualcomm.cabl=1
